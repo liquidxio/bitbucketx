@@ -1,0 +1,141 @@
+extends layout
+
+block content
+    h1= title
+    p The World's Outcomes Repository
+
+    // Wrapper
+    #wrapper
+
+        // USER INFO
+        #userInfo
+            h2 Outcomes Profile
+            p
+                strong Number of Repos:
+                |  <span id='userNumRepos'></span>
+                br
+                strong Name:
+                |  <span id='userName'></span>
+                br
+                strong Staff:
+                |  <span id='userStaff'></span>
+                br
+                strong Avatar:
+                |  <span id='userAvatar'></span>
+                br
+                strong Member of Team:
+                |  <span id='userTeam'></span>
+                br
+                strong Source:
+                |  <span id='userSource'></span>
+            h2 Repositories                
+            p
+              strong Name:
+              |  <span id='repoName'></span>
+              br
+              strong Description:
+              |  <span id='repoDescription'></span>
+              br
+              strong Language:
+              |  <span id='repoLanguage'></span>
+              br
+              strong Source Control Method:
+              |  <span id='repoScm'></span>
+              br
+              strong Has Wiki:
+              |  <span id='repoWiki'></span>
+              br  
+              strong Last Updated:
+              |  <span id='repoLastUpdated'></span>
+              br
+              strong Has Forks:
+              |  <span id='repoForks'></span>
+              br
+              strong Created On:
+              |  <span id='repoCreatedOn'></span>
+              br
+              strong Owner:
+              |  <span id='repoOwner'></span>
+              br
+              strong Logo:
+              |  <span id='repoLogo'></span>
+              br
+              strong Email Mailinglist:
+              |  <span id='repoEmailMailinglist'></span>
+              br
+              strong Uses Mercurial Queue:
+              |  <span id='repoIsMq'></span>
+              br
+              strong Size:
+              |  <span id='repoSize'></span>
+              br
+              strong Read Only:
+              |  <span id='repoReadOnly'></span>
+              br  
+              strong Fork Of:
+              |  <span id='repoForkOf'></span>
+              br
+              strong Mq Of:
+              |  <span id='repoMqOf'></span>
+              br
+              strong State:
+              |  <span id='repoState'></span>
+              br
+              strong Created On (UTC):
+              |  <span id='repoUtcCreatedOn'></span>
+              br
+              strong Website:
+              |  <span id='repoWebSite'></span>
+              br              
+              strong Has Issues:
+              |  <span id='repoHasIssues'></span>
+              br
+              strong Is Fork:
+              |  <span id='repoIsFork'></span>
+              br
+              strong Slug:
+              |  <span id='repoSlug'></span>
+              br
+              strong Is Private:
+              |  <span id='repoIsPrivate'></span>
+              br                  
+              strong Utc Last Updated:
+              |  <span id='repoUtcLastUpdated'></span>
+              br
+              strong Email Writers:
+              |  <span id='repoEmailWriters'></span>
+              br
+              strong No Public Forks:
+              |  <span id='repoNoPublicForks'></span>
+              br
+              strong Creator:
+              |  <span id='repoCreator'></span>
+              br
+              strong Recource URI:
+              |  <span id='repoRecourceURI'></span>
+        // /USER INFO
+
+        // USER LIST
+        h2 Outcomes Catalogue
+        #userList
+            table
+                thead
+                    th User Name
+                    th Name
+                    th Private Access
+                    th Delete?
+                tbody
+        // /USER LIST
+
+        // ADD USER
+        h2 Poll the World's Repositories
+        #addUser
+            fieldset
+                input#inputUserName(type='text', placeholder='Username')
+                input#inputUserEmail(type='text', placeholder='Email')
+                input#inputOauth(type='text', placeholder='Oauth? y or n') 
+                br
+                button#btnAddUser Search BitBucket
+        // /ADD USER
+
+    // /WRAPPER
