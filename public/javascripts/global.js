@@ -220,6 +220,8 @@ function addUser(event) {
 
                 // Clear the form inputs
                 $('#addUser fieldset input#inputUserName').val('');
+                $('#addUser fieldset input#inputUserEmail').val('');
+                $('#addUser fieldset input#inputOauth').val('');
 
                 // Update the table
                 populateTable();                

@@ -46,7 +46,7 @@ router.get('/userlist', function(req, res) {
 /*
  * POST to adduser.
  */
-router.post('/adduser', function(req, res) {
+router.post('/adduser', function(req, respo) {
     var db = req.db;
     var parmAdd = req.body;
     var parmAdd1 = JSON.stringify(parmAdd);
@@ -110,6 +110,8 @@ router.post('/adduser', function(req, res) {
 		            
 		            // If object successfully added, say so
 		            console.log("record added");
+		            
+		            respo.send((err === null) ? {msg: ''} : {msg: err});
 		        });
 	    	}
 	    	else	    		
@@ -144,6 +146,8 @@ router.post('/adduser', function(req, res) {
 	                
 	                // If object successfully added, say so
 	                console.log("record added");
+	                
+	                respo.send((err === null) ? {msg: ''} : {msg: err});
 	            });
 			}
 			
