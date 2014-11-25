@@ -4,22 +4,19 @@ applications:
 
 # the name of the app that is used in `CF` commands
 
-- name:    liquidxio
+- name:    xiobitbucket
  
 # the indented values are settings for the app
 
   # this is the host name of your app; the app will be available at the url:
   #   http://<host>.mybluemix.net
 
-  host:    liquidxio
+  host:    xiobitbucket
 
   # amount of RAM that is allocated
 
-  memory:  512M
+  memory:  150M
 
   # command to run when deployed through 'CF push'
 
-  command: node app.js
-  
-  
- 
+  command: node app.js 
